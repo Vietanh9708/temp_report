@@ -1,0 +1,32 @@
+xin chào, i'm VA form TIM department. today i would like to share with you this report is Innove function of document system by Winform ans RPA association.
+This report have 4 part is background , problem, action merit and last iss next plan.
+The first as you know Document Control system by TIM develop did control a lot of document like ER,DSUM, ECAR,WI. And recently we just finish 2 document is ERI and TVP.
+Documents are divided into 2 step:
+step 1 like ECAR, WI is paperless and support function control issue/check/approve and auto delivery to relate dept.
+step 2 like ERI, TVP have all function of step1 plus connect to other system from Yako like NPIS,EUC and additionnal function Order control & production control.
+Exp ERI SYSEM case PO control flow from PE issue to Fee charge confirm is as nomal system.
+ And we add new function control PO from pre PO , issie adjust if any devivery part to finish part.
+when building the system, we need to ensure some functions is record all history off issue PO & adjust. Upload right data to NPIS and auto like progess NPIS, EUC to ERI sysste,
+No double aperation on both system.
+The first we add new menu control all History adjust change or cancel, re issue and new PO.
+Next to upload right data to NPIS we design export form same with NPIS. User can export file csv from ERI system and upload to NPIS TO MAKE issue PO on NPIS.
+The last is our hardest problem : auto link NPIS, EUC to ERI system. 
+we have idea is using RPA ger data from NPIS & EUC and uplad to 3 step of ERI system for close part like this.
+But actual as you can see, when RPA runing from Search infor, export excel file. Open file to read data AND insert to database PO_RPA.
+aLL FOR 5 STEP take 2 minutes. One time running we have more 60 item so take more 2 hour. 
+And last step is from database PO_RPA link data to table ERI part list of ERI system is have problem is format ERI No differ like this. So we need take time to processing data for one part is more than 2 minute.
+This step for all part is take 2 hour!
+So all progress for 1 time RPA running we take total 4 hour. It is so big. And get some trouble like waste to much time on data processing, may be update late data form ERI URGENT.AND MAY BE CAUSE TIME OUT.
+SO WE USING WINFORM.
+aND WHAT IS WINFROM? WINFOR ALLOWS application that run on Window of client no need using server.
+can run in the background or by user operation. And winform can fast data processing speed.
+We write tool by win form and set up task schedler for fisrttime running, next time no need and Code in winform will check data, processing and selection right items to update to ERI system.
+
+Winform only take 1 mintute when runing for all items need processing data and strong for handle complex and log commands.
+Result we can see. RPA 1 get data from NPIS insert SQL server and Winform will handel data and update for issue and approve PO NPIS.
+When have delivery part, RPA 2 will get data from EUC and update to SQL server. Winform will read and change status to close Part in ERI system.
+Sumary, by using system we no need paper and can cut step TIM scan and some step control PO.
+Boost productivity for user and system by No double aperation on both system.
+Next plan is apply all new control .................
+
+
